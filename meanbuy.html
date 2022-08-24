@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '40974cfb2emsh453e54fdfe3730cp1d5bc8jsn61d0aa344f53',
+		'X-RapidAPI-Host': 'ali-express1.p.rapidapi.com'
+	}
+};
+
+fetch('https://ali-express1.p.rapidapi.com/product/4000479928418?language=en', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+</script>
