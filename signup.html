@@ -1,0 +1,46 @@
++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+    <div>
+        <img src=https://d64lkarmo2mrq.cloudfront.net/baselogo.png alt="">
+        <h2>Login Or Create Account</h2>
+    </div>
+    <form>
+        <label for="EMAIL">EMAIL</label><br>
+        <input id="email" type="text"><br>
+         <label for="">Password</label><br>
+         <input id="password" type="password"><br>
+         <label for="">Confirm Password</label><br>
+         <input type="password" id="cpassword"><br>
+        <input type="submit" value="LOGIN">
+</form>
+</body>
+</html>
+<script>
+    let arr=JSON.parse(localStorage.getItem("signup"))||[]
+
+form=document.querySelector("form");
+form.addEventListener("submit",function(e){
+e.preventDefault();
+ let obj={
+     Pemail:form.email.value,
+     Ppassword:form.password.value,
+ }
+ if(obj.Pemail=="" &&obj.Ppassword==""){
+    alert("please filled oll box");
+     return
+ }
+ 
+    arr.push(obj)
+ localStorage.setItem("signup",JSON.stringify(arr))
+ 
+ //console.log(obj)
+})
+</script>
