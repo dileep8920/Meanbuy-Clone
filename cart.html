@@ -108,9 +108,7 @@
             padding-top: 15px;
         }
 
-        .det {
-            /* padding-left: 15px; */
-        }
+        
 
         #totalprice {
             border: 1px solid transparent;
@@ -444,6 +442,7 @@
             deleted.src="https://icons.veryicon.com/png/o/commerce-shopping/soft-designer-online-tools-icon/delete-77.png"
             deleted.addEventListener("click",function(el){
                 data.splice(index,1)
+                localStorage.setItem("")
                 display(data)
             })
             details.append(title,quant,free,date,deleted)

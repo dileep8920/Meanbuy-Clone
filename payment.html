@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*navbar  */
+        #navbar{
+            width: 100%;
+            height: 150px;
+            border: 1px solid;
+        }
+        /* payment */
+        #payment{
+            width: 100%;
+            display: flex;
+        }
+        .div{
+            margin: auto;
+            margin-top: 40px;
+            border: 1px solid;
+            width: 40%;
+        }
+        .div>h4{
+            font-size: 25px;
+        }
+        .div>h4+p{
+            font-size: 15px;
+        }
+        .div>h6{
+            margin-top:20px;
+            margin-bottom: 7px;
+        }
+        #check+p{
+            margin-left: 20px;
+            margin-top: -20px;
+            font-size: 13px;
+        }
+        #check+p+h4{
+            margin-top: 30px;
+        }
+        #check{
+            background-color: aqua;
+        }
+        #add{
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            border: 1px solid;
+            gap: 20px 0px;
+        }
+        #add>div{
+            border: 1px solid;
+        }
+        .adpin{
+            border: 1px solid;
+            width: 90%;
+            margin-top: 7px;
+            height: 35px;
+            border-radius: 4px;
+            font-size: 18px;
+            padding-left: 8px;
+            
+        }
+        #state{
+            width: 93%;
+        }
+        #india>p{
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        /* payment details */
+        #add+h4{
+            margin-top: 45px;           
+        }
+        #payop{
+            display: grid;
+            border: 1px solid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: 150px;
+        }
+        #credit>div{
+            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) 20px 0/700px 90px
+        }
+        #net>div{
+            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) -110px 0/920px 88px
+        }
+        #emi>div{
+            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) -330px 0/850px 95px
+        }
+        #upi>div{
+            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/upi_icon.png)14px 0/95px 100px
+        }
+        #simpl>div{
+            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/simpl_icon.png)0px 0/110px 100px
+        }
+        .op>p{
+            font-size: 15px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .op>div{
+            border: 1px solid;
+            width: 100%;
+            height: 70%;
+            /* background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) 10px 0/950px 90px */
+        }
+
+        .emmo{
+            border: 1px solid;
+            width: 94%;
+            margin-top: 0px;
+            height: 35px;
+            border-radius: 4px;
+            font-size: 18px;
+            padding: 5px;
+            padding-left: 8px;
+        }
+        #savings_dude {
+            background: url(https://d64lkarmo2mrq.cloudfront.net/icons/checkout_dude.png);
+            width: 33px;
+            height: 48px;
+            position: relative;
+            top: 2px;
+        }
+        #savings_dude, .savings_text{
+            display: inline-block;
+        }
+        #total_saved {
+            background: #fff7f2;
+            width: 98%;
+            margin: auto;
+            color: #ff6b00;
+            box-shadow: 0 1px 6px rgb(0 0 0 / 25%);
+            text-align: center;
+            border-radius: 20px;
+        }
+        .price_overview_tbl {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 25px;
+            font-size: 12px;
+            table-layout: fixed;
+        }
+        td {
+            display: table-cell;
+            vertical-align: inherit;
+        }
+        table {
+            border-spacing: 10px;
+        }
+        .color_red {
+            color: red;
+        }
+        
+
+        /* footer */
+        #footer{
+            margin-top: 30px;
+            width: 100%;
+            height: 300px;
+            border: 1px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="payment">
+        <div class="div">
+            <h4>Your Phone no and email</h4>
+            <p>for full account</p>
+            <h6>Email Address</h6>
+            <input type="text" class="emmo" id="email" placeholder="Email Address">
+            <h6>Phone Number</h6>
+            <input type="number" class="emmo" id="mobile" placeholder="Phone Number">
+            <br>
+            <input type="checkbox" name="" id="check">
+            <p> I agree to be contacted through Whatsapp for Order Updates</p>
+            <h4>Delivery Address</h4>
+            <h6>Name</h6>
+            <input type="text" class="emmo" id="name" placeholder="Name">
+            <div id="add">
+                <div>
+                    <h6>Address 1</h6>
+                    <input type="text" id="address1" class="adpin" placeholder="Address 1">
+                </div>
+                <div>
+                    <h6>Address 2</h6>
+                    <input type="text" id="address2" class="adpin" placeholder="Address 2">
+                </div>
+                <div>
+                    <h6>State</h6>
+                    <select name="" id="state" onchange="myfun()" class="adpin">
+                        <option value="">Select State</option>
+                        <option value="uttarakhand">uttarakhand</option>
+                    </select>
+                </div>
+                <div>
+                    <h6>City</h6>
+                    <input type="text" id="city" class="adpin" placeholder="City">
+                </div>
+                <div>
+                    <h6>Country</h6>
+                    <div id="india" class="adpin"><p>India</p> </div>    
+                </div>
+                <div>
+                    <h6>Pincode</h6>
+                    <input type="number" name="" id="pincode" class="adpin" placeholder="Pincode">
+                </div>
+            </div>
+            <h4>Payment Details</h4>
+            <div id="payop" >
+                <div id="credit" class="op">
+                    <div></div>
+                    <p>Credit/Debit Card</p>
+                </div>
+                <div id="net" class="op">
+                    <div></div>
+                    <p>Net Banking</p>
+                </div>
+                <div id="emi" class="op">
+                    <div></div>
+                    <p>EMI</p>
+                </div>
+                <div id="upi" class="op">
+                    <div></div>
+                    <p>UPI</p>
+                </div>
+                <div id="simpl" class="op">
+                    <div></div>
+                    <p>Simpl Pay</p>
+                </div>
+            </div>
+            <div id="now">
+                <p id="accept">We accept all major credit and debit cards of Indian and International banks.</p>
+                <button id="paynow">PAY NOW</button>
+            </div>
+        </div>
+        <div class="div">
+            <div id="products">
+                <div>
+                    <h6></h6>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <p><a href="#">Edit Cart</a></p>
+            <div id="total_saved">
+                <div id="savings_dude"></div>
+                <div class="savings_text">
+                    <strong>Congratulations!</strong>
+                     You have saved 
+                    <span>skhksh</span>
+                </div>
+            </div>
+            <table class="price_overview_tbl">
+                <tbody>
+                    <tr>
+                        <td>Sub Total</td>
+                        <td align="center" width="50">:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Shipping Fees</td>
+                        <td align="center" width="50">:</td>
+                        <td>Shipping: Free</td>
+                    </tr>
+                    <tr>
+                        <td>Custom/Import Duties, Taxes</td>
+                        <td align="center" width="50">:</td>
+                        <td class="color_red">Not Applicable!</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="wrongpromo"><strong></strong></p>
+            <p>Got a Promotional Code? Use below:</p>
+            <div id="promocode">
+                <input type="text" id="code">
+                <button>Apply Now</button>   
+            </div>
+            <div id="remove"></div>
+            <div id="line"></div>
+            <table>
+                <tr>
+                    <td><strong>Grand Total</strong></td>
+                    <td align="center" width="50"><strong>:</strong></td>
+                    <td><strong>10998</strong></td>
+                </tr>
+                <tr>
+                    <td>Promotion</td>
+                    <td>:</td>
+                    <td>250RS</td>
+                </tr>
+            </table>
+            <p></p>
+            <p id="offer">Get Upto 500 OFF on your first Time Prepaid Order with coupon<p>PREPAID</p></p>
+            <img src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png" alt="">
+            <h4>Our Shop. Your Price</h4>
+            <p>Online Shopping Redefined</p>
+            <div id="last"></div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+<script>
+    let data=JSON.parse(localStorage.getItem("productsdet"))||[]
+    function myfun(){
+        let state=document.getElementById("state").value;
+        // console.log(state)
+        return state;
+    }
+
+
+    let pay=document.getElementById("payop");
+    pay.addEventListener("click",payy)
+    function payy(e){
+        let arr=[];
+        let st=document.getElementById("accept");
+        if(e.target.id=credit){
+            // console.log("hello")
+            let line=document.getElementById("credit");
+            st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+            line.style.borderBottom = "thick solid #f7941d"
+            // console.log(e.target.id)
+           if(arr.length==0){
+            arr.push("credit")
+           }else{
+            arr.pop()
+            arr.push('credit')
+           }
+        //    console.log(arr)
+        }
+         if(e.target.id=net){
+            if(arr.length==0){
+                arr.push("net")
+            }else{
+                arr.pop()
+                arr.push('net')
+            }
+            st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+            let linee=document.getElementById("net");
+            linee.style.borderBottom = "thick solid #f7941d"
+        }
+        // if(e.target.id==credit){
+        //     console.log("hello")
+        // }
+        // let st=document.getElementById("accept");
+        // st.innerText="Hello";
+        // let line=document.getElementById("simpl");
+        // line.style.borderBottom = "thick solid #f7941d"
+        // line.style.Border="Solid";
+        console.log(arr)
+    }
+    // console.log(arr)
+    // function pay1(){
+        
+    //     // line.style.Border="Solid";
+    // }
+    // function pay2(){
+        
+    //     // line.style.Border="Solid";
+    // }
+    // function pay3(){
+    //     let st=document.getElementById("accept");
+    //     st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+    //     let line=document.getElementById("emi");
+    //     line.style.borderBottom = "thick solid #f7941d"
+    //     // line.style.Border="Solid";
+    // }
+    // function pay4(){
+    //     let st=document.getElementById("accept");
+    //     st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+    //     let line=document.getElementById("upi");
+    //     line.style.borderBottom = "thick solid #f7941d"
+    //     // line.style.Border="Solid";
+    // }
+        
+
+
+
+
+
+
+
+
+
+
+
+</script>
