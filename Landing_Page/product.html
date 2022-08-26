@@ -45,6 +45,10 @@
             padding: 10px;
             border-radius: 6px;
         }
+        #gifts{
+            color: green;
+            font-size: 14px;
+        }
         #prices{
             display: flex;
             justify-content: space-around;
@@ -58,9 +62,11 @@
         #offer{
             color: green;
         }
-        h4{
-            color: green;
+        #h4{
+            /* color: green; */
+            font-size: 12px;
         }
+       
         button{
             background-color: rgb(255, 166, 0);
             color:black;
@@ -144,10 +150,10 @@
             <h3 id="offer" style="font-family: sans-serif ;">Upto 30% OFF</h3>
         </div>
         <p id="saving" style="font-family: sans-serif ;">(save upto ₹ 3,500.00)</p>
-        <h4 id="gifts" style="font-family: sans-serif ;">Receive free gifts for ORDERS ABOVE ₹ 1899</h4>
-        <h4 style="font-family: sans-serif ;">Get Upto 500 with coupon code PREPAID</h4>
+        <h4 id="gifts" style="font-family: sans-serif ;">CASH ON DELIVERY available on orders between ₹999 and ₹10,000</h4>
+        <h4 style="font-family: sans-serif ; " id="h4">Get Upto 500 off with coupon code PREPAID</h4>
           <button onclick="myfunction()"> <a href="payment.html" style="text-decoration: none; color: black;">Buy Now</a> </button> 
-          <button onclick="mycartfunction()">Wishlist</button> 
+          <button onclick="mycartfunction()">Add to Cart</button> 
 
            <p style="font-family: sans-serif ;">prices starting at </p>
            <h2 id="mainprice" class="sub">₹ 32,999</h2>
@@ -172,6 +178,6 @@
     }
     function mycartfunction()
     {
-        window.location.href="wishlist.html"
+        window.location.href="cart.html"
     }
 </script>
