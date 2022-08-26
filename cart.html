@@ -316,7 +316,7 @@
             <div id="totalprice">
                 <p id="total"></p>
                 <p id="rate"></p>
-                <button id="out">CHECKOUT NOW</button>
+                <a href="payment.html"><button id="out">CHECKOUT NOW</button></a>
             </div>
         </div>
     </div>
@@ -342,13 +342,9 @@
     ];
 
     display(data)
-    function display(data){
-        
+    function display(data){ 
         let pro = document.getElementById("pro");
-        pro.innerHTML=""
-        // let otherday = "";
-        // let sum=0;
-        // let printing;
+        pro.innerHTML="";
         let sum=0;
         data.forEach((el,index) => {
             let products=document.createElement("div");
@@ -423,6 +419,7 @@
                     //     console.log("sum",sum)
                     // }
                     el.quantity=numbers.value;
+                    localStorage.setItem("productsdet",JSON.stringify(data))
                     display(data)
                     
                 }
@@ -442,7 +439,7 @@
             deleted.src="https://icons.veryicon.com/png/o/commerce-shopping/soft-designer-online-tools-icon/delete-77.png"
             deleted.addEventListener("click",function(el){
                 data.splice(index,1)
-                localStorage.setItem("")
+                localStorage.setItem("productsdet",JSON.stringify(data))
                 display(data)
             })
             details.append(title,quant,free,date,deleted)
@@ -515,6 +512,7 @@
 
         let sub=document.getElementById("sub");
         sub.innerText=`subtotal:${sum}`;
+        localStorage.setItem("total",sum)
         console.log("total",sum)
         let total=document.getElementById("total");
         total.innerText=`Cart total ${sum}`

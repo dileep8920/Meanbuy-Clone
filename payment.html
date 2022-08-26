@@ -24,11 +24,11 @@
         .div{
             margin: auto;
             margin-top: 40px;
-            border: 1px solid;
-            width: 40%;
+            border: 1px solid transparent;
+            width: 38%;
         }
         .div>h4{
-            font-size: 25px;
+            font-size: 20px;
         }
         .div>h4+p{
             font-size: 15px;
@@ -36,6 +36,7 @@
         .div>h6{
             margin-top:20px;
             margin-bottom: 7px;
+            font-size: 14px;
         }
         #check+p{
             margin-left: 20px;
@@ -52,11 +53,14 @@
             margin-top: 20px;
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            border: 1px solid;
-            gap: 20px 0px;
+            border: 1px solid transparent;
+            gap: 20px 0px;   
+        }
+        #add>div>h6{
+            font-size: 14px;
         }
         #add>div{
-            border: 1px solid;
+            border: 1px solid transparent;
         }
         .adpin{
             border: 1px solid;
@@ -81,7 +85,7 @@
         }
         #payop{
             display: grid;
-            border: 1px solid;
+            border: 1px solid transparent;
             grid-template-columns: repeat(5,1fr);
             grid-template-rows: 150px;
         }
@@ -92,29 +96,43 @@
             background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) -110px 0/920px 88px
         }
         #emi>div{
-            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) -330px 0/850px 95px
+            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) -335px 0/850px 95px
         }
         #upi>div{
-            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/upi_icon.png)14px 0/95px 100px
+            background:url(https://d64lkarmo2mrq.cloudfront.net/icons/upi_icon.png)11px 0/92px 100px
         }
         #simpl>div{
             background:url(https://d64lkarmo2mrq.cloudfront.net/icons/simpl_icon.png)0px 0/110px 100px
         }
-        .op>p{
+        .simplepayicon {
+            background-image: url(https://d64lkarmo2mrq.cloudfront.net/icons/89165818.png);
+            background-size: 40px 14px;
+            display: inline-block;
+            width: 40px;
+            height: 14px;
+        }
+        .active{
+            border-bottom: 5px solid #ff6b00;
+        }
+        .optionsecoptions>p{
             font-size: 15px;
             font-weight: 800;
             text-align: center;
             margin-bottom: 10px;
         }
-        .op>div{
-            border: 1px solid;
+        .optionsecoptions>div{
+            border: 1px solid transparent;
             width: 100%;
             height: 70%;
             /* background:url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) 10px 0/950px 90px */
         }
+        #line3{
+            margin-top: 20px;
+            border-top: 1px solid black;
+        }
 
         .emmo{
-            border: 1px solid;
+            border: 1px solid ;
             width: 94%;
             margin-top: 0px;
             height: 35px;
@@ -129,18 +147,24 @@
             height: 48px;
             position: relative;
             top: 2px;
+            margin-left: 20%;
         }
-        #savings_dude, .savings_text{
-            display: inline-block;
+        .savings_text{
+            display: flex;
+            align-items: center;
         }
         #total_saved {
             background: #fff7f2;
             width: 98%;
             margin: auto;
+            font-size: 18px;
             color: #ff6b00;
             box-shadow: 0 1px 6px rgb(0 0 0 / 25%);
             text-align: center;
             border-radius: 20px;
+            height: 56px;
+            display: flex;
+            margin-top: 10px;
         }
         .price_overview_tbl {
             width: 100%;
@@ -159,6 +183,166 @@
         .color_red {
             color: red;
         }
+
+        #products{
+            border: 1px solid transparent;
+            width: 100%;   
+        }
+        #products>div{
+            border: 1px solid rgb(180, 175, 175);
+            width: 98%;
+            height: 75px;
+            margin-bottom: 10px;
+        }
+        #products>div>h6{
+            font-size: 13px;
+            text-transform: uppercase;
+            margin: 10px 0px 0px 10px;
+        }
+        #delivery_date{
+            font-size: 13px;
+            color: #ff6b00;
+            margin: 5px 0px 0px 10px;
+        }
+        #delivery_date>span{
+            color: black;
+        }
+        #price{
+            font-size: 13px;
+            color: #ff6b00;
+            margin: 5px 0px 0px 10px;
+        }
+        #price>span{
+            color: black;
+        }
+        #price>span:last-child{
+            text-decoration-line: line-through;
+            color: rgb(97, 95, 95);
+            margin-left: 10px;
+        }
+        #products+p>a{
+            font-size: 15px;
+        }
+        #products+p{
+            margin-top: -10px;
+        }
+        #wrongpromo+p{
+            font-size: 13px;
+            margin-left: 10px;
+        }
+        #promocode{
+            width: 98%;
+            margin: auto;
+            margin-top: 8px;
+            height: 32px;
+        }
+        #code{
+            width: 200px;
+            border: 1px solid;
+            font-size: 20px;
+            height: 100%;
+        }
+        #apply{
+            width: 130px;
+            font-size: 17px;
+            height:34px;
+            padding-top: 3px;
+            margin-left: -10px;
+            background-color: #ff6b00;
+            border: 1px solid transparent;
+            color: white;
+        }
+        #wrongpromo{
+            font-size: 15px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            color: #ff6b00;
+        }
+        #remove{
+            margin-top: 5px;
+            margin-left: 10px;
+            font-size: 15px;
+            color: blue;
+            cursor: pointer;
+            text-decoration-line: underline;
+        }
+        #line{
+            width: 98%;
+            margin: auto;
+            margin-top: 20px;
+            border-top: 1px solid;
+            margin-bottom: -20px;
+        }
+        #tr1{
+            font-size: 17px;
+        }
+        #saving{
+            color: black;
+        }
+        #td1{
+            font-size: 17px;
+            color: #ff6b00;
+        }
+        #promo{
+            color: rgb(20, 139, 20);
+            font-size: 14px;
+            margin-left: -10px;
+            margin-top: -10px;
+        }
+        #interest{
+            color: grey;
+            font-size: 15px;
+            font-weight: 400;
+            margin-left: 10px;
+            margin-top: -17px;
+        }
+        #offer{
+            margin-left: 10px;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        #offer>span{
+            margin-left: 3px;
+            color: #ff6b00;
+        }
+        #meanbuy{
+            display: block;
+            width: 100px;
+            margin-left: 40%;
+        }
+        #meanbuy+h4{
+            text-align: center;
+            font-size: 20px;
+        }
+        #meanbuy+h4+p{
+            text-align: center;
+            font-size: 13px;
+            margin-top: 3px;
+        }
+        #last{
+            width: 8%;
+            margin: auto;
+            border-top:4px solid #ff6b00;
+            margin-top: 18px;
+        }
+        #now{
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #accept{
+            text-align: center;
+            font-size: 13px;
+        }
+        #paynow{
+            width: 100%;
+            height: 40px;
+            background-color: #ff6b00;
+            color: white;
+            font-size: 20px;
+            border: 1px solid transparent;
+            margin-top: 10px;
+        }
         
 
         /* footer */
@@ -168,7 +352,6 @@
             height: 300px;
             border: 1px solid;
         }
-
     </style>
 </head>
 <body>
@@ -218,47 +401,40 @@
             </div>
             <h4>Payment Details</h4>
             <div id="payop" >
-                <div id="credit" class="op">
-                    <div></div>
+                <div id="credit" class="optionsecoptions" >
+                    <div id="cre"></div>
                     <p>Credit/Debit Card</p>
                 </div>
-                <div id="net" class="op">
+                <div id="net" class="optionsecoptions">
                     <div></div>
                     <p>Net Banking</p>
                 </div>
-                <div id="emi" class="op">
+                <div id="emi" class="optionsecoptions">
                     <div></div>
                     <p>EMI</p>
                 </div>
-                <div id="upi" class="op">
+                <div id="upi" class="optionsecoptions">
                     <div></div>
                     <p>UPI</p>
                 </div>
-                <div id="simpl" class="op">
+                <div id="simpl" class="optionsecoptions">
                     <div></div>
                     <p>Simpl Pay</p>
                 </div>
             </div>
             <div id="now">
-                <p id="accept">We accept all major credit and debit cards of Indian and International banks.</p>
-                <button id="paynow">PAY NOW</button>
+                <p id="accept"></p>
+                <button id="paynow">PAY NOW!</button>
             </div>
         </div>
         <div class="div">
-            <div id="products">
-                <div>
-                    <h6></h6>
-                    <p></p>
-                    <p></p>
-                </div>
-            </div>
-            <p><a href="#">Edit Cart</a></p>
+            <div id="products"></div>
+            <p><a href="cart.html">Edit Cart</a></p>
+            <div id="line3"></div>
             <div id="total_saved">
                 <div id="savings_dude"></div>
                 <div class="savings_text">
-                    <strong>Congratulations!</strong>
-                     You have saved 
-                    <span>skhksh</span>
+                    <span><strong>Congratulations!</strong>You have saved <span id="saving">7000</span></span>
                 </div>
             </div>
             <table class="price_overview_tbl">
@@ -266,7 +442,7 @@
                     <tr>
                         <td>Sub Total</td>
                         <td align="center" width="50">:</td>
-                        <td></td>
+                        <td id="sub"></td>
                     </tr>
                     <tr>
                         <td>Shipping Fees</td>
@@ -280,29 +456,29 @@
                     </tr>
                 </tbody>
             </table>
-            <p id="wrongpromo"><strong></strong></p>
+            <p id="wrongpromo"></p>
             <p>Got a Promotional Code? Use below:</p>
             <div id="promocode">
                 <input type="text" id="code">
-                <button>Apply Now</button>   
+                <button id="apply" onclick="coupon()">Apply Code</button>   
             </div>
-            <div id="remove"></div>
+            <div id="remove" onclick="remove()"></div>
             <div id="line"></div>
-            <table>
-                <tr>
-                    <td><strong>Grand Total</strong></td>
+            <table class="price_overview_tbl price_total_tbl" >
+                <tr id="tr1">
+                    <td id="td1"><strong>Grand Total</strong></td>
                     <td align="center" width="50"><strong>:</strong></td>
-                    <td><strong>10998</strong></td>
+                    <td id="td2"><strong id="tdd">12</strong></td>
                 </tr>
-                <tr>
+                <tr id="promo" style="display: block;">
                     <td>Promotion</td>
                     <td>:</td>
-                    <td>250RS</td>
+                    <td id="td3">₹0</td>
                 </tr>
             </table>
-            <p></p>
-            <p id="offer">Get Upto 500 OFF on your first Time Prepaid Order with coupon<p>PREPAID</p></p>
-            <img src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png" alt="">
+            <p id="interest">Or 3 interest free payment of <span id="rupe"></span> with <i class="simplepayicon"></i></p>
+            <p id="offer">Get 500 OFF on your first Time Prepaid Order with coupon<span>PREPAID</span></p>
+            <img id="meanbuy" src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png" alt="">
             <h4>Our Shop. Your Price</h4>
             <p>Online Shopping Redefined</p>
             <div id="last"></div>
@@ -312,54 +488,54 @@
 </body>
 </html>
 <script>
-    let data=JSON.parse(localStorage.getItem("productsdet"))||[]
+    let data=JSON.parse(localStorage.getItem("productsdet"))
+    let alltotal=localStorage.getItem("total");
     function myfun(){
         let state=document.getElementById("state").value;
-        // console.log(state)
         return state;
     }
 
 
-    let pay=document.getElementById("payop");
-    pay.addEventListener("click",payy)
-    function payy(e){
-        let arr=[];
-        let st=document.getElementById("accept");
-        if(e.target.id=credit){
-            // console.log("hello")
-            let line=document.getElementById("credit");
-            st.innerText="We accept all major credit and debit cards of Indian and International banks.";
-            line.style.borderBottom = "thick solid #f7941d"
-            // console.log(e.target.id)
-           if(arr.length==0){
-            arr.push("credit")
-           }else{
-            arr.pop()
-            arr.push('credit')
-           }
-        //    console.log(arr)
-        }
-         if(e.target.id=net){
-            if(arr.length==0){
-                arr.push("net")
-            }else{
-                arr.pop()
-                arr.push('net')
-            }
-            st.innerText="We accept all major credit and debit cards of Indian and International banks.";
-            let linee=document.getElementById("net");
-            linee.style.borderBottom = "thick solid #f7941d"
-        }
-        // if(e.target.id==credit){
-        //     console.log("hello")
-        // }
-        // let st=document.getElementById("accept");
-        // st.innerText="Hello";
-        // let line=document.getElementById("simpl");
-        // line.style.borderBottom = "thick solid #f7941d"
-        // line.style.Border="Solid";
-        console.log(arr)
-    }
+    // let pay=document.getElementById("payop");
+    // pay.addEventListener("click",payy)
+    // function payy(e){
+    //     let arr=[];
+    //     let st=document.getElementById("accept");
+    //     if(e.target.id=credit){
+    //         // console.log("hello")
+    //         let line=document.getElementById("credit");
+    //         st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+    //         line.style.borderBottom = "thick solid #f7941d"
+    //         // console.log(e.target.id)
+    //        if(arr.length==0){
+    //         arr.push("credit")
+    //        }else{
+    //         arr.pop()
+    //         arr.push('credit')
+    //        }
+    //     //    console.log(arr)
+    //     }
+    //      if(e.target.id=net){
+    //         if(arr.length==0){
+    //             arr.push("net")
+    //         }else{
+    //             arr.pop()
+    //             arr.push('net')
+    //         }
+    //         st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+    //         let linee=document.getElementById("net");
+    //         linee.style.borderBottom = "thick solid #f7941d"
+    //     }
+    //     // if(e.target.id==credit){
+    //     //     console.log("hello")
+    //     // }
+    //     // let st=document.getElementById("accept");
+    //     // st.innerText="Hello";
+    //     // let line=document.getElementById("simpl");
+    //     // line.style.borderBottom = "thick solid #f7941d"
+    //     // line.style.Border="Solid";
+    //     console.log(arr)
+    // }
     // console.log(arr)
     // function pay1(){
         
@@ -383,7 +559,143 @@
     //     line.style.borderBottom = "thick solid #f7941d"
     //     // line.style.Border="Solid";
     // }
+
+
+    // var selectedDiv = document.getElementById("credit");
+    let option = document.querySelectorAll('.optionsecoptions')
+    function payy(){
+        let st=document.getElementById("accept");
+        option.forEach((el)=>{
+            el.addEventListener('click',function(){
+                option.forEach(ele=>ele.classList.remove('active'));
+                console.log(el.id)
+                if(el.id==="net"){
+                    st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+                }
+                if(el.id==="upi"){
+                    st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+                }
+                if(el.id==="credit"){
+                    st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+                }
+                if(el.id==="emi"){
+                    st.innerText="We accept all major credit and debit cards of Indian and International banks.";
+                }
+                if(el.id==="simpl"){
+                    st.innerText=`3 interest free payments of ₹${(alltotal/3).toFixed(2)} with Simpl!`;
+                }
+                this.classList.add('active')
+            })
+        })
+    }
+    payy()
+
+    // document.getElementById('confirmBtn').addEventListener('click',function(){
         
+    //     var selectedEl = document.querySelector(".selected");
+    //     if(selectedEl)
+    //         alert(selectedEl.innerText);    
+    //     else
+    //         alert('please choose an option')
+    // })
+
+
+
+
+
+
+    function display(data){
+        let save=0;
+        let products=document.getElementById("products");
+        products.innerHTML="";
+        data.forEach(el => {
+            let div=document.createElement("div");
+            let h6=document.createElement("h6");
+            h6.innerText=el.title;
+            let p=document.createElement("p");
+            p.setAttribute("id","delivery_date");
+            p.innerText="Delivery Date:";
+            let span1=document.createElement("span");
+            span1.innerText="26 September";
+            p.append(span1);
+            let p1=document.createElement("p");
+            p1.setAttribute("id","price");
+            p1.innerText="Price : ";
+            let span2=document.createElement("span");
+            span2.innerText=`₹${el.your_price}`;
+            let span3=document.createElement("span");
+            span3.innerText=`₹${el.our_price}`;
+            p1.append(span2,span3);
+            div.append(h6,p,p1)
+            products.append(div)
+            save=save+(el.our_price-el.your_price)
+        });
+        let saving=document.getElementById("saving");
+        saving.innerText=`₹${save}`
+        let rupe=document.getElementById("rupe");
+        let s=(alltotal/3).toFixed(2);
+        rupe.innerText=`₹${s}`;
+        rupe.style.color="black"
+
+    }
+
+
+    display(data)
+
+
+    let sub=document.getElementById("sub");
+    sub.innerText=`₹${alltotal}`
+
+    let grande=document.getElementById("tdd");
+    grande.innerText=`₹${alltotal}`;
+
+    function coupon(){
+        let code=document.getElementById("code");
+        if(code.value==="PREPAID"){
+            alltotal=alltotal-500;
+            let grand=document.getElementById("tdd");
+            grand.innerText=`₹${alltotal}`;
+            let promo=document.getElementById("td3");
+            promo.innerText=`₹500`;
+            document.getElementById("apply").disabled=true;
+            let rem=document.getElementById("remove");
+            rem.innerText="Remove Promotional Code"
+            let wro=document.getElementById("wrongpromo");
+            wro.innerText="Promo Code applied successfully"
+            let rupe=document.getElementById("rupe");
+            let s=(alltotal/3).toFixed(2);
+            rupe.innerText=`₹${s}`;
+            rupe.style.Color="black"
+        }else{
+            let wro=document.getElementById("wrongpromo");
+            wro.innerText="This Promo Code is not valid"
+        }
+    }
+
+    function remove(){
+        alltotal=alltotal+500;
+        let grand=document.getElementById("tdd");
+        grand.innerText=`₹${alltotal}`;
+        let promo=document.getElementById("td3");
+        promo.innerText=`₹0`;
+        document.getElementById("apply").disabled=false;
+        let rem=document.getElementById("remove");
+        rem.innerText="";
+        let wro=document.getElementById("wrongpromo");
+        wro.innerText="";
+        let rupe=document.getElementById("rupe");
+        let s=(alltotal/3).toFixed(2);
+        rupe.innerText=`₹${s}`;
+        rupe.style.Color="black"
+    }
+    
+
+
+
+
+
+
+    
 
 
 
