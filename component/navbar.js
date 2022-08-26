@@ -1,4 +1,4 @@
-let navbar=()=>{
+let navbar = () => {
     return `
     <div class="navbar">
     <div id="maindiv">
@@ -41,12 +41,12 @@ let navbar=()=>{
                          <div class="mega-menu">
                              <div class="inner-mega-menu">
                                 <div>
-                                <p> <a href="Accessories.html">Accessories</a> </p>
-                                 <p><a href="Electronics.html">Electronics</a></p>
-                                 <p><a href="">Home & Living</a></p>
-                                 <p><a href="">Kids & Moms</a></p>
-                                 <p><a href="">Meanbuy Deals</a></p>
-                                 <p><a href="">Mobile & Tablets</a></p>
+                                <h5><u>MEN</u></h5>
+                                <p><a href="">Watches</a></p>
+                                <p><a href="">Men's Watches</a></p>
+                                <h4><u>WOMEN</u></h4>
+                                <p><a href="">Makeup Accessories</a></p>
+                                <p><a href="">Watches</a></p>
                                 </div>
                                 <div>
                                       <p> <a href="Accessories.html">Accessories</a> </p>
