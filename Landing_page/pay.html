@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/pay.css">
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="payment">
+      <div class="div">
+        <h4>Your Phone no and email</h4>
+        <p>for full account</p>
+        <h6>Email Address</h6>
+        <input
+          type="text"
+          class="emmo"
+          id="email"
+          placeholder="Email Address"
+        />
+        <h6>Phone Number</h6>
+        <input
+          type="number"
+          class="emmo"
+          id="mobile"
+          placeholder="Phone Number"
+        />
+        <br />
+        <input type="checkbox" id="check" />
+        <p>I agree to be contacted through Whatsapp for Order Updates</p>
+        <h4>Delivery Address</h4>
+        <h6>Name</h6>
+        <input type="text" class="emmo" id="name" placeholder="Name" />
+        <div id="add">
+          <div>
+            <h6>Address 1</h6>
+            <input
+              type="text"
+              id="address1"
+              class="adpin"
+              placeholder="Address 1"
+            />
+          </div>
+          <div>
+            <h6>Address 2</h6>
+            <input
+              type="text"
+              id="address2"
+              class="adpin"
+              placeholder="Address 2"
+            />
+          </div>
+          <div>
+            <h6>State</h6>
+            <select id="state" onchange="myfun()" class="adpin">
+              <option value="">Select State</option>
+              <option value="Assam">Assam</option>
+              <option value="Arunanchal">Arunanchal</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Maharastra">Maharastra</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+              <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Orissa">Orissa</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Tripura">Tripura</option>
+              <option value="himanchal Pradesh">Himanchal Pradesh</option>
+            </select>
+          </div>
+          <div>
+            <h6>City</h6>
+            <input type="text" id="city" class="adpin" placeholder="City" />
+          </div>
+          <div>
+            <h6>Country</h6>
+            <div id="india" class="adpin"><p>India</p></div>
+          </div>
+          <div>
+            <h6>Pincode</h6>
+            <input
+              type="number"
+              id="pincode"
+              class="adpin"
+              placeholder="Pincode"
+            />
+          </div>
+        </div>
+        <h4>Payment Details</h4>
+        <div id="payop">
+          <div id="credit" class="optionsecoptions">
+            <div></div>
+            <p>Credit/Debit Card</p>
+          </div>
+          <div id="net" class="optionsecoptions">
+            <div></div>
+            <p>Net Banking</p>
+          </div>
+          <div id="emi" class="optionsecoptions">
+            <div></div>
+            <p>EMI</p>
+          </div>
+          <div id="upi" class="optionsecoptions">
+            <div></div>
+            <p>UPI</p>
+          </div>
+          <div id="simpl" class="optionsecoptions">
+            <div></div>
+            <p>Simpl Pay</p>
+          </div>
+        </div>
+        <div id="now">
+          <p id="accept"></p>
+          <button id="paynow">PAY NOW!</button>
+        </div>
+      </div>
+      <div class="div">
+        <div id="products"></div>
+        <p><a href="cart.html">Edit Cart</a></p>
+        <div id="line3"></div>
+        <div id="total_saved">
+          <div id="savings_dude"></div>
+          <div class="savings_text">
+            <span
+              ><strong>Congratulations!</strong>You have saved
+              <span id="saving">7000</span></span
+            >
+          </div>
+        </div>
+        <table class="price_overview_tbl">
+          <tbody>
+            <tr>
+              <td>Sub Total</td>
+              <td align="center" width="50">:</td>
+              <td id="sub"></td>
+            </tr>
+            <tr>
+              <td>Shipping Fees</td>
+              <td align="center" width="50">:</td>
+              <td>Shipping: Free</td>
+            </tr>
+            <tr>
+              <td>Custom/Import Duties, Taxes</td>
+              <td align="center" width="50">:</td>
+              <td class="color_red">Not Applicable!</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="wrongpromo"></p>
+        <p>Got a Promotional Code? Use below:</p>
+        <div id="promocode">
+          <input type="text" id="code" />
+          <button id="apply" onclick="coupon()">Apply Code</button>
+        </div>
+        <div id="remove" onclick="remove()"></div>
+        <div id="line"></div>
+        <table class="price_overview_tbl price_total_tbl">
+          <tr id="tr1">
+            <td id="td1"><strong>Grand Total</strong></td>
+            <td align="center" width="50"><strong>:</strong></td>
+            <td id="td2"><strong id="tdd">0</strong></td>
+          </tr>
+          <tr id="promo" style="display: block">
+            <td>Promotion</td>
+            <td>:</td>
+            <td id="td3">₹0</td>
+          </tr>
+        </table>
+        <p id="interest">
+          Or 3 interest free payment of <span id="rupe"></span> with
+          <i class="simplepayicon"></i>
+        </p>
+        <p id="offer">
+          Get 500 OFF on your first Time Prepaid Order with coupon<span
+            >PREPAID</span
+          >
+        </p>
+        <img
+          id="meanbuy"
+          src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png"
+          alt=""
+        />
+        <h4>Our Shop. Your Price</h4>
+        <p>Online Shopping Redefined</p>
+        <div id="last"></div>
+      </div>
+    </div>
+    <dialog id="popup">
+      <div id="top1">
+        <img
+          id="imag"
+          src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png"
+          alt=""
+        />
+        <h4>Meanbuy</h4>
+        <br />
+        <h1 id="topay"></h1>
+        <div id="close">×</div>
+      </div>
+      <div id="top2">
+        <h5>Enter Card Details</h5>
+        <span id="span1"
+          ><input type="number" placeholder="Card Number" id="card" />
+          <input type="number" placeholder="Expiry" id="expiry"
+        /></span>
+        <span id="span2"
+          ><input type="text" placeholder="Name" id="namee" />
+          <input type="number" placeholder="CVV" id="cvv"
+        /></span>
+      </div>
+      <div id="top3"><p></p></div>
+    </dialog>
+    <div id="footer"></div>
+  </body>
+</html>
+<script src="../scripts/pay.js" type="module"></script>
