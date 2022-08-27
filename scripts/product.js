@@ -1,8 +1,8 @@
-import navbar from "../component/navbar.js"
-document.getElementById("navbar").innerHTML=navbar()
+// import navbar from "../component/navbar.js"
+// document.getElementById("navbar").innerHTML=navbar()
 
-import footer from "../component/footer.js"
-document.getElementById("footer").innerHTML=footer()
+// import footer from "../component/footer.js"
+// document.getElementById("footer").innerHTML=footer()
     let data=[
         {
           titlehref: "https://www.meanbuy.com/shop/product/Dual_Movt_Quartz_Wristwatch_2",
@@ -297,4 +297,26 @@ document.getElementById("footer").innerHTML=footer()
       }
       
       display(data)
-      
+
+
+      let productbox=document.getElementById("container");
+      document.querySelector("#filter").addEventListener("click",mysort)
+      function mysort(){
+         productbox.innerHTML="";
+         let number=document.querySelector("#filter").value
+         if(number==1){
+             data.sort(function(a,b){
+                 return a.your_price-b.your_price
+             })
+             display(data);
+         }
+         if(number==2){
+             data.sort(function(a,b){
+                 return b.your_price-a.your_price
+             })
+             display(data);
+         }
+         if(number==0){
+             display(data);
+         }
+      }

@@ -5,6 +5,9 @@
     document.getElementById("footer").innerHTML=footer()
     let data=JSON.parse(localStorage.getItem("productsdet"))||[];
 
+    let login=localStorage.getItem("login");
+
+
     display(data)
     function display(){ 
         let pro = document.getElementById("pro");
@@ -118,3 +121,14 @@
         let rate=document.getElementById("rate");
         rate.innerText=`Or 3 interest free payments of  ₹${(sum/3).toFixed(2)} with simpl!`
     }
+
+
+
+    let checkout=document.getElementById("out");
+    checkout.addEventListener("click",function(){
+        if(login==true){
+            window.location.href="pay.html"
+        }else{
+            window.location.href="login.html"
+        }
+    })
