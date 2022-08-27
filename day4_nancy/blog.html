@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./blog.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
+    <div id="navbar"></div>
     <div id="container">
         <h1>BLOGS</h1>
         <div id="hr">
@@ -127,7 +129,7 @@
 
                 <img src="https://d64lkarmo2mrq.cloudfront.net/blog/main_images/17.png">
                 <h3 id="p1">The Coolest Gadgets
-                    You've Never Heard of 
+                    You've Never Heard of
                     -Meanbuy Exclusive</h3>
 
                 <div id="hr2"></div>
@@ -203,6 +205,15 @@
         </div>
 
     </div>
+    <div id="footer"></div>
 </body>
 
 </html>
+<script type="module">
+    import navbar from "../component/navbar.js"
+    document.getElementById("navbar").innerHTML = navbar();
+
+    import footer from "../component/footer.js"
+    document.getElementById("footer").innerHTML = footer()
+
+</script>
