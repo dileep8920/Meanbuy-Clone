@@ -1,0 +1,252 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+#container {
+    width: 100%;
+    display: flex;
+}
+
+#container1 {
+    border: 1px solid transparent;
+    margin-left: 50px;
+    margin-top: 30px;
+    width: 60%;
+}
+
+#header {
+    display: flex;
+    height: 40px;
+}
+
+.image {
+    width: 20%;
+    border: 1px solid transparent;
+    background-color: whitesmoke;
+}
+
+.productdet {
+    border: 1px solid transparent;
+    width: 48%;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 7px;
+    font-weight: 500;
+    color: rgb(107, 105, 105);
+    background-color: whitesmoke;
+}
+
+.ourprice {
+    width: 16%;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 7px;
+    font-weight: 500;
+    color: rgb(107, 105, 105);
+    background-color: whitesmoke;
+}
+
+.yourprice {
+    width: 16%;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 7px;
+    font-weight: 500;
+    color: rgb(107, 105, 105);
+    background-color: whitesmoke;
+}
+
+/* Checkout div */
+#checkoutdetails {
+    width: 18%;
+    height: 320px;
+    border: 1px solid rgb(209, 206, 206);
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+#header1 {
+    width: 100%;
+    height: 40px;
+    font-weight: 650;
+    font-size: 25px;
+    text-align: center;
+    background-color: whitesmoke;
+    color: grey;
+}
+
+#prices {
+    border: 1px solid transparent;
+    width: 80%;
+    height: 90px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#quantity {
+    padding-top: 15px;
+    font-weight: 500;
+}
+#sub{
+    font-weight: 500;
+    color: #f7941d;
+}
+#shipping{
+    font-weight: 500;
+    color: green;
+}
+#rate{
+    font-weight: 500;
+    color: gray;
+}
+
+
+
+#totalprice {
+    border: 1px solid transparent;
+    width: 80%;
+    height: 140px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-top: 1px solid rgb(167, 165, 165);
+}
+
+#total {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#out {
+    margin-top: 40px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #f7941d;
+    border: 1px solid transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* products */
+#pro {
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    /* height: 140px; */
+    /* display: flex; */
+}
+
+#products {
+    width: 100%;
+    text-transform: uppercase;
+    border: 1px solid rgb(220, 215, 215);
+    height: 140px;
+    display: flex;
+}
+
+#images {
+    width: 20%;
+    height: 100%;
+}
+
+#img {
+    border: 1px solid transparent;
+    width: 60%;
+    height: 70%;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+#details {
+    border: 1px solid transparent;
+    width: 48%;
+    height: 100%;
+}
+
+#our {
+    border: 1px solid transparent;
+    width: 16%;
+    height: 100%;
+    text-align: center;
+    text-decoration-line: line-through;
+}
+
+#our>p {
+    margin-top: 35%;
+    font-size: 15px;
+    color: grey;
+    font-weight: 500;
+    text-underline-position: auto;
+}
+
+#your {
+    border: 1px solid transparent;
+    width: 16%;
+    height: 100%;
+    text-align: center;
+}
+
+#your>p {
+    margin-top: 35%;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#quant {
+    display: flex;
+}
+
+#select {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#number {
+    margin-top: 5px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+#free {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: teal;
+}
+
+#date {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#title {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+#delete {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 5px;
+}

@@ -1,0 +1,456 @@
+
+      #payment {
+        width: 100%;
+        display: flex;
+      }
+      .div {
+        margin: auto;
+        margin-top: 40px;
+        border: 1px solid transparent;
+        width: 38%;
+      }
+      .div > h4 {
+        font-size: 20px;
+      }
+      .div > h4 + p {
+        font-size: 15px;
+      }
+      .div > h6 {
+        margin-top: 20px;
+        margin-bottom: 7px;
+        font-size: 14px;
+      }
+      #check + p {
+        margin-left: 20px;
+        margin-top: -20px;
+        font-size: 13px;
+      }
+      #check + p + h4 {
+        margin-top: 30px;
+      }
+      #check {
+        background-color: aqua;
+      }
+      #add {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border: 1px solid transparent;
+        gap: 20px 0px;
+      }
+      #add > div > h6 {
+        font-size: 14px;
+      }
+      #add > div {
+        border: 1px solid transparent;
+      }
+      .adpin {
+        border: 1px solid;
+        width: 90%;
+        margin-top: 7px;
+        height: 35px;
+        border-radius: 4px;
+        font-size: 18px;
+        padding-left: 8px;
+      }
+      #state {
+        width: 93%;
+      }
+      #india > p {
+        font-size: 18px;
+        margin-top: 5px;
+      }
+      /* payment details */
+      #add + h4 {
+        margin-top: 45px;
+      }
+      #payop {
+        display: grid;
+        border: 1px solid transparent;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 150px;
+      }
+      #credit > div {
+        background: url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png)
+          20px 0/700px 90px;
+      }
+      #net > div {
+        background: url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) -110px
+          0/920px 88px;
+      }
+      #emi > div {
+        background: url(https://d64lkarmo2mrq.cloudfront.net/icons/paysymbols_paypage.png) -335px
+          0/850px 95px;
+      }
+      #upi > div {
+        background: url(https://d64lkarmo2mrq.cloudfront.net/icons/upi_icon.png)
+          11px 0/92px 100px;
+      }
+      #simpl > div {
+        background: url(https://d64lkarmo2mrq.cloudfront.net/icons/simpl_icon.png)
+          0px 0/110px 100px;
+      }
+      .simplepayicon {
+        background-image: url(https://d64lkarmo2mrq.cloudfront.net/icons/89165818.png);
+        background-size: 40px 14px;
+        display: inline-block;
+        width: 40px;
+        height: 14px;
+      }
+      .active {
+        border-bottom: 5px solid #ff6b00;
+      }
+      .optionsecoptions > p {
+        font-size: 15px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .optionsecoptions > div {
+        border: 1px solid transparent;
+        width: 100%;
+        height: 70%;
+      }
+      #line3 {
+        margin-top: 20px;
+        border-top: 1px solid black;
+      }
+
+      .emmo {
+        border: 1px solid;
+        width: 94%;
+        margin-top: 0px;
+        height: 35px;
+        border-radius: 4px;
+        font-size: 18px;
+        padding: 5px;
+        padding-left: 8px;
+      }
+      #savings_dude {
+        background: url(https://d64lkarmo2mrq.cloudfront.net/icons/checkout_dude.png);
+        width: 33px;
+        height: 48px;
+        position: relative;
+        top: 2px;
+        margin-left: 20%;
+      }
+      .savings_text {
+        display: flex;
+        align-items: center;
+      }
+      #total_saved {
+        background: #fff7f2;
+        width: 98%;
+        margin: auto;
+        font-size: 18px;
+        color: #ff6b00;
+        box-shadow: 0 1px 6px rgb(0 0 0 / 25%);
+        text-align: center;
+        border-radius: 20px;
+        height: 56px;
+        display: flex;
+        margin-top: 10px;
+      }
+      .price_overview_tbl {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 25px;
+        font-size: 12px;
+        table-layout: fixed;
+      }
+      td {
+        display: table-cell;
+        vertical-align: inherit;
+      }
+      table {
+        border-spacing: 10px;
+      }
+      .color_red {
+        color: red;
+      }
+
+      #products {
+        border: 1px solid transparent;
+        width: 100%;
+      }
+      #products > div {
+        border: 1px solid rgb(180, 175, 175);
+        width: 98%;
+        height: 75px;
+        margin-bottom: 10px;
+      }
+      #products > div > h6 {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin: 10px 0px 0px 10px;
+      }
+      #delivery_date {
+        font-size: 13px;
+        color: #ff6b00;
+        margin: 5px 0px 0px 10px;
+      }
+      #delivery_date > span {
+        color: black;
+      }
+      #price {
+        font-size: 13px;
+        color: #ff6b00;
+        margin: 5px 0px 0px 10px;
+      }
+      #price > span {
+        color: black;
+      }
+      #price > span:last-child {
+        text-decoration-line: line-through;
+        color: rgb(97, 95, 95);
+        margin-left: 10px;
+      }
+      #products + p > a {
+        font-size: 15px;
+      }
+      #products + p {
+        margin-top: -10px;
+      }
+      #wrongpromo + p {
+        font-size: 13px;
+        margin-left: 10px;
+      }
+      #promocode {
+        width: 98%;
+        margin: auto;
+        margin-top: 8px;
+        height: 32px;
+      }
+      #code {
+        width: 200px;
+        border: 1px solid;
+        font-size: 20px;
+        height: 100%;
+      }
+      #apply {
+        width: 130px;
+        font-size: 17px;
+        height: 34px;
+        padding-top: 3px;
+        margin-left: -10px;
+        background-color: #ff6b00;
+        border: 1px solid transparent;
+        color: white;
+      }
+      #wrongpromo {
+        font-size: 15px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        color: #ff6b00;
+      }
+      #remove {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 15px;
+        color: blue;
+        cursor: pointer;
+        text-decoration-line: underline;
+      }
+      #line {
+        width: 98%;
+        margin: auto;
+        margin-top: 20px;
+        border-top: 1px solid;
+        margin-bottom: -20px;
+      }
+      #tr1 {
+        font-size: 17px;
+      }
+      #saving {
+        color: black;
+      }
+      #td1 {
+        font-size: 17px;
+        color: #ff6b00;
+      }
+      #promo {
+        color: rgb(20, 139, 20);
+        font-size: 14px;
+        margin-left: -10px;
+        margin-top: -10px;
+      }
+      #interest {
+        color: grey;
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 10px;
+        margin-top: -17px;
+      }
+      #offer {
+        margin-left: 10px;
+        font-size: 13px;
+        margin-top: 10px;
+      }
+      #offer > span {
+        margin-left: 3px;
+        color: #ff6b00;
+      }
+      #meanbuy {
+        display: block;
+        width: 100px;
+        margin-left: 40%;
+      }
+      #meanbuy + h4 {
+        text-align: center;
+        font-size: 20px;
+      }
+      #meanbuy + h4 + p {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 3px;
+      }
+      #last {
+        width: 8%;
+        margin: auto;
+        border-top: 4px solid #ff6b00;
+        margin-top: 18px;
+      }
+      #now {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+      }
+      #accept {
+        text-align: center;
+        font-size: 13px;
+      }
+      #paynow {
+        width: 100%;
+        height: 40px;
+        background-color: #ff6b00;
+        color: white;
+        font-size: 20px;
+        border: 1px solid transparent;
+        margin-top: 10px;
+      }
+
+      /* footer */
+      #footer {
+        margin-top: 30px;
+        width: 100%;
+        height: 300px;
+        border: 1px solid;
+      }
+
+      /* popup */
+
+      #popup {
+        width: 23%;
+        height: 476px;
+        border: 1px solid transparent;
+        margin: auto;
+        margin-bottom: 40px;
+        margin-top: 100px;
+      }
+      #popup::-webkit-scrollbar {
+        display: none;
+      }
+      #popup::backdrop {
+        background: grey;
+        opacity: 0.7;
+      }
+      #top1 {
+        width: 100%;
+        height: 150px;
+        background-color: #f48739;
+        color: white;
+        border: 1px solid transparent;
+        display: flex;
+      }
+      #imag {
+        display: block;
+        margin-left: 30px;
+        width: 90px;
+        height: 90px;
+        background-color: white;
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 0px 5px 0px 5px;
+      }
+      #top1 > h4 {
+        margin-left: 15px;
+        margin-top: 20px;
+      }
+      #topay {
+        border: 1px solid transparent;
+        margin-top: 50px;
+        font-size: 30px;
+        margin-left: -75px;
+      }
+      #close {
+        height: 60px;
+        width: 60px;
+        font-size: 40px;
+        margin-left: 12%;
+        cursor: pointer;
+        margin-top: 0px;
+      }
+      #top2 {
+        border: 1px solid transparent;
+        height: 250px;
+      }
+      #top2 > h5 {
+        margin-top: 40px;
+        margin-left: 10px;
+        font-size: 20px;
+      }
+      #card {
+        margin-left: 10px;
+        width: 60%;
+        height: 30px;
+        margin-top: 20px;
+        font-size: 17px;
+        padding-left: 7px;
+      }
+      #expiry {
+        margin-left: 20px;
+        width: 20%;
+        height: 30px;
+        font-size: 17px;
+        padding-left: 7px;
+      }
+      #namee {
+        margin-left: 10px;
+        width: 60%;
+        height: 30px;
+        margin-top: 20px;
+        font-size: 17px;
+        padding-left: 7px;
+      }
+      #cvv {
+        margin-left: 20px;
+        width: 20%;
+        height: 30px;
+        font-size: 17px;
+        padding-left: 7px;
+      }
+      #top3 {
+        width: 100%;
+        height: 70px;
+        background-color: #f48739;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+      #top3 > p {
+        margin: auto;
+        font-size: 20px;
+      }
+      #orderimg{
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-top: 100px;
+      }
+      #head{
+        color: blue;
+        text-align: center;
+        font-size: 50px;
+        margin-top: 200px;
+      }
