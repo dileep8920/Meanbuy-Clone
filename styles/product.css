@@ -9,8 +9,8 @@
             display: grid;
             grid-template-columns: repeat(4,1fr);
             gap: 40px 50px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-top: 240px;
+            margin-bottom: 200px;
         }
         #box{
             border: 1px solid transparent;
