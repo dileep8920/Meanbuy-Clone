@@ -88,9 +88,8 @@
 </div>
 </body>
 </html>
-<script type="module">
-    import footer from "../component/footer.js"
-    document.getElementById("footer").innerHTML=footer()
+<script>
+
 
     let arr=JSON.parse(localStorage.getItem("signup"))||[]
 
@@ -132,3 +131,5 @@ function checkmail(Pemail) {
         }
     }
 </script>
+
+<script src="../scripts/index.js" type="module"></script>
