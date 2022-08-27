@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        #maindiv{
+            width: 90%;
+            height: 700px;
+            /* border: 1px solid grey; */
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        #logo{
+            width: 15%;
+            height:40px;
+            background-color: rgb(246,136,21);
+            margin-left: 2%;
+            margin-bottom: 0px;
+            text-align: center;
+            padding: 5px;
+            color: white;
+            font-size: 25px;
+        }
+        #subdiv1{
+           
+            width: 500px;
+            height: 400px;
+        }
+        #subdiv2{
+          
+            width: 500px;
+            height: 800px;
+            text-align: left;
+        }
+        h2{
+            color: rgb(31, 29, 29);
+        }
+        span{
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        #prices{
+            display: flex;
+            justify-content: space-around;
+        }
+        #mainprice{
+            color: orange;
+        }
+        #stickoff{
+            text-decoration: line-through;
+        }
+        #offer{
+            color: green;
+        }
+        h4{
+            color: green;
+        }
+        button{
+            background-color: rgb(255, 166, 0);
+            color:black;
+            padding: 20px;
+            width: 50%;
+            border: 0px;
+            border-radius: 6px;
+            font-size: 20px;
+            margin-top: 6px;
+            font-family: sans-serif ;
+            font-weight: bolder;
+            
+        }
+        #subimages > img{
+           width: 150px;
+           height: 150px;
+           margin: 5px;
+        }
+        li{
+            font-family: sans-serif ;
+        }
+
+        @media only screen and (min-width: 481px) and (max-width: 800px) {
+        #maindiv {
+          flex-direction: column;
+        }
+
+        #subdiv2 {
+          margin-top: 5%;
+        }
+        #subimages{
+            display: none;
+        }
+      }
+
+      @media only screen and (min-width: 0px) and (max-width: 480px) {
+        #maindiv {
+          flex-direction: column;
+        }
+
+        #subdiv2 {
+          margin-top: 5%;
+        }
+        #subimages{
+            display: none;
+        }
+      }
+      h2{
+        color: #465a64;
+      }
+        
+      #topimg{
+        width: 100%;
+      }
+        
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div id="subdiv1">
+            <p id="logo">
+                -29%
+            </p>
+            <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl8xXzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="" id="topimg">
+
+            <div id="subimages">
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl8yXzIuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="">
+
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl8zXzMuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="">
+
+                <img src="https://dbnzj30o7hucx.cloudfront.net/eyJidWNrZXQiOiJtZWFuYnV5LWltYWdlcyIsImtleSI6IjMxMjI1XC9SZWRfbl80XzQuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMDAwLCJoZWlnaHQiOjEwMDAsImZpdCI6ImNvbnRhaW4iLCJiYWNrZ3JvdW5kIjp7InIiOjI1NSwiZyI6MjU1LCJiIjoyNTUsImFscGhhIjoxfX19fQ==" alt="">
+            </div>
+        </div>
+        <div id="subdiv2">
+
+            <h2 style="font-family: sans-serif ;">KOSPET TANK M1 PRO WATCH</h2>
+            <span>4.00/5 *</span>
+            <div id="prices" >
+            <h2 id="mainprice">₹ 8,499.00</h2>
+            <h2 id="stickoff">₹ 11,999.00</h2>
+            <h3 id="offer" style="font-family: sans-serif ;">Upto 30% OFF</h3>
+        </div>
+        <p id="saving" style="font-family: sans-serif ;">(save upto ₹ 3,500.00)</p>
+        <h4 id="gifts" style="font-family: sans-serif ;">Receive free gifts for ORDERS ABOVE ₹ 1899</h4>
+        <h4 style="font-family: sans-serif ;">Get Upto 500 with coupon code PREPAID</h4>
+          <button onclick="myfunction()"> <a href="payment.html" style="text-decoration: none; color: black;">Buy Now</a> </button> 
+          <button onclick="mycartfunction()">Wishlist</button> 
+
+           <p style="font-family: sans-serif ;">prices starting at </p>
+           <h2 id="mainprice" class="sub">₹ 32,999</h2>
+           <ul style="font-family: sans-serif ;">
+               <li >10 DAYS REPLACEMENT</li>
+               <li>MEANBUY QUALITY PROMISE</li>
+               <li>6 MONTHS WARENTY</li>
+               <li>GAUREENTEED DELIVERY IN 24 DAYS</li>
+               <li>COD[available on orders ₹ 999 - ₹ 2499 only]</li>
+           </ul>
+          
+           
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function myfunction(){
+        window.location.href="pay.html"
+    }
+    function mycartfunction()
+    {
+        window.location.href="cart.html"
+    }
+</script>
