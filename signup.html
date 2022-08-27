@@ -6,20 +6,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
+    <style>
+    input{
+        width:100%;
+        padding:10px;
+        margin:30px;
+    }
+    h2{
+        color:orange;
+    }
+    #signup{
+        background-color: orange;
+    }
+    #ancer{
+        margin-left: 200px;;
+    }
+    #container{
+        display:flex;
+       width:95%;
+        /* border:1px solid red; */
+        margin:auto;
+    }
+    #main{
+        width:70%;
+        /* border:1px solid blue; */
+        
+    }
+    #cart{
+        height:40%;
+        width:35%;
+        /* border:1px solid; */
+        margin:130px 100px;
+    }
+    button{
+        width:100%;
+        padding:10px;
+        background-color: orangered;
+    }
+    #tag{
+        height:100px;
+        margin:30px 10%;
+    }
+        </style>
 </head>
 <body>
-    <div>
+    <div id="container">
+        <div id="main">
         <img src=https://d64lkarmo2mrq.cloudfront.net/baselogo.png alt="">
+        <hr>
         <h2>Login Or Create Account</h2>
-    </div>
+    
     <form>
         <label for="EMAIL">EMAIL</label><br>
-        <input id="email" type="text"><br>
+        <input id="email" type="text" placeholder="Email address"><br>
          <label for="">Password</label><br>
-         <input id="password" type="password"><br>
+         <input id="password" type="password" placeholder="Password"><br>
          <label for="">Confirm Password</label><br>
-         <input type="password" id="cpassword"><br>
-        <input type="submit" value="LOGIN">
+         <input type="password" id="cpassword" placeholder="Conform password"><br>
+        <input type="submit" value="SIGN UP" id="signup"><br>
+        <a href="" id="ancer">Already MeanBy account?Log In</a>
+        </div>
+        <div id="cart">
+
+            <h3>CART DETAIL</h3>
+            <hr>
+            <p>Total item:0</p>
+            <p>Sub Total :0.00</p>
+
+            <p>Cart Total :0.00</p>
+            <button>EDIT CART</button>
+            <img id="tag" src="https://www.meanbuy.com/assets/img/india/logo/logo_main.png" alt="">
+            <h3>Our Shop.Your Price</h3>
+            <p>Feel the power to buy at your price</p>
+        </div>
 </form>
 </body>
 </html>
@@ -33,14 +92,34 @@ e.preventDefault();
      Pemail:form.email.value,
      Ppassword:form.password.value,
  }
- if(obj.Pemail=="" &&obj.Ppassword==""){
-    alert("please filled oll box");
-     return
- }
- 
+ if(checkmail(obj.Pemail)==true){
     arr.push(obj)
- localStorage.setItem("signup",JSON.stringify(arr))
+    localStorage.setItem("signup",JSON.stringify(arr))
+    alert("signup succeessful")
+ }
+ else{
+    alert("user already exist")
+ }
+
+//  localStorage.setItem("signup",JSON.stringify(arr))
+//  if(obj.Pemail=="" ||obj.Ppassword==""){
+//     alert("please filled oll box");
+//      return
+//  }
+ 
+//     arr.push(obj)
+ 
  
  //console.log(obj)
 })
+function checkmail(Pemail) {
+        let filtered = arr.filter(function (element) {
+            return Pemail === element.Pemail;
+        })
+        if (filtered.length > 0) {
+            return false
+        } else {
+            return true
+        }
+    }
 </script>
