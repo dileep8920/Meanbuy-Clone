@@ -1,0 +1,122 @@
++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <style>
+    input{
+        width:100%;
+        padding:10px;
+        margin:30px;
+    }
+    h2{
+        color:orange;
+    }
+    #signup{
+        background-color: orange;
+    }
+    #ancer{
+        margin-left: 200px;
+    }
+    #forgot{
+        color:black;
+        margin-left: 240;
+    }
+    #container{
+        display:flex;
+       width:95%;
+        /* border:1px solid red; */
+        margin:auto;
+    }
+    #main{
+        width:70%;
+        
+        
+    }
+    #cart{
+        height:40%;
+        width:35%;
+        /* border:1px solid; */
+        margin:130px 100px;
+    }
+    button{
+        width:100%;
+        padding:10px;
+        background-color: orangered;
+    }
+    #tag{
+        height:100px;
+        margin:30px 10%;
+    }
+        </style>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+        <img src=https://d64lkarmo2mrq.cloudfront.net/baselogo.png alt="">
+        <hr>
+        <h2>Login Or Create Account</h2>
+    
+    <form>
+        <label for="EMAIL">EMAIL</label><br>
+        <input id="email" type="text" placeholder="Email address"><br>
+         <label for="">Password</label><br>
+         <input id="password" type="password" placeholder="Password"><br>
+        <input type="submit" value="LOG IN" id="signup"><br>
+        <a href="" id="forgot">Forgot password?</a><br>
+        <a href="" id="ancer">Already MeanBy account?sign up</a>
+        </div>
+        <div id="cart">
+
+            <h3>CART DETAIL</h3>
+            <hr>
+            <p>Total item:0</p>
+            <p>Sub Total :0.00</p>
+
+            <p>Cart Total :0.00</p>
+            <button>EDIT CART</button>
+            <img id="tag" src="https://www.meanbuy.com/assets/img/india/logo/logo_main.png" alt="">
+            <h3>Our Shop.Your Price</h3>
+            <p>Feel the power to buy at your price</p>
+        </div>
+</form>
+</body>
+</html>
+<script>
+   
+let arr=JSON.parse(localStorage.getItem("signup"))||[]
+
+form=document.querySelector("form");
+form.addEventListener("submit",function(e){
+e.preventDefault();
+
+if(arr.length===0){
+alert("No user till now")
+return
+}
+ let obj={
+     Pemail:form.email.value,
+     Ppassword:form.password.value
+ }
+ let flag=false
+arr.forEach(function(ele,index){
+    if(ele.Pemail===obj.Pemail &&ele.Ppassword===obj.Ppassword)
+    {
+        flag=true;
+
+        localStorage.setItem("signin",JSON.stringify(ele))
+        alert("Sign in succesfully");
+        window.location.href="index.html"
+    }
+})
+if(flag===false){
+    alert("user does not exist")
+}
+ 
+})
+
+</script>
+</script>
