@@ -83,9 +83,15 @@
             <p>Feel the power to buy at your price</p>
         </div>
 </form>
+<div id="footer">
+    
+</div>
 </body>
 </html>
-<script>
+<script type="module">
+
+import footer from "../component/footer.js"
+document.getElementById("footer").innerHTML=footer()
    
 let arr=JSON.parse(localStorage.getItem("signup"))||[]
 
