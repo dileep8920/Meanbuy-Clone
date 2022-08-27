@@ -27,6 +27,7 @@ let navbar = () => {
                      <p id="log2">WELCOME GUEST</p>
  
                 </div>
+                <a href="cart.html">
                 <div id="cart">
                     <div id="carIm">
                         <img class="cartimg" src="http://www.clker.com/cliparts/O/N/s/Q/P/Y/shopping-cart-orange-th.png" alt="">
@@ -34,6 +35,7 @@ let navbar = () => {
                     </div></p>0</div>
             </div>
          </div>
+        </a>
         <div id="lower-div">
             <nav class="nav-bar">
                 <ul>
