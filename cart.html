@@ -27,7 +27,7 @@
         }
 
         #container1 {
-            border: 1px solid rgb(209, 206, 206);
+            border: 1px solid transparent;
             margin-left: 50px;
             margin-top: 30px;
             width: 60%;
@@ -78,7 +78,7 @@
         /* Checkout div */
         #checkoutdetails {
             width: 18%;
-            height: 300px;
+            height: 320px;
             border: 1px solid rgb(209, 206, 206);
             margin-left: 50px;
             margin-top: 30px;
@@ -106,6 +106,19 @@
 
         #quantity {
             padding-top: 15px;
+            font-weight: 500;
+        }
+        #sub{
+            font-weight: 500;
+            color: #f7941d;
+        }
+        #shipping{
+            font-weight: 500;
+            color: green;
+        }
+        #rate{
+            font-weight: 500;
+            color: gray;
         }
 
         
@@ -123,6 +136,7 @@
 
         #total {
             margin-top: 10px;
+            font-weight: 500;
         }
 
         #out {
@@ -141,7 +155,7 @@
         #pro {
             width: 100%;
             text-transform: uppercase;
-            border: 1px solid;
+            border: 1px solid transparent;
             /* height: 140px; */
             /* display: flex; */
         }
@@ -149,7 +163,7 @@
         #products {
             width: 100%;
             text-transform: uppercase;
-            border: 1px solid;
+            border: 1px solid rgb(220, 215, 215);
             height: 140px;
             display: flex;
         }
@@ -160,35 +174,38 @@
         }
 
         #img {
-            border: 1px solid;
+            border: 1px solid transparent;
             width: 60%;
             height: 70%;
             margin: auto;
+            display: block;
+            margin-top: 20px;
         }
 
         #details {
-            border: 1px solid;
+            border: 1px solid transparent;
             width: 48%;
             height: 100%;
         }
 
         #our {
-            border: 1px solid;
+            border: 1px solid transparent;
             width: 16%;
             height: 100%;
             text-align: center;
+            text-decoration-line: line-through;
         }
 
         #our>p {
             margin-top: 35%;
             font-size: 15px;
+            color: grey;
             font-weight: 500;
-            text-decoration-line: line-through;
             text-underline-position: auto;
         }
 
         #your {
-            border: 1px solid;
+            border: 1px solid transparent;
             width: 16%;
             height: 100%;
             text-align: center;
@@ -236,7 +253,7 @@
 
         #title {
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             margin-left: 10px;
         }
@@ -257,9 +274,6 @@
             width: 100%;
             height: 200px;
         }
-        .fa-inr {
-            display: inline;
-        }
     </style>
 </head>
 
@@ -274,36 +288,6 @@
                 <div class="yourprice">Your Price</div>
             </div>
             <div id="pro">
-                <!-- <div id="products">
-                    <div id="images">
-                        <div id="img">
-                        </div>
-                    </div>
-                    <div id="details">
-                        <h4 id="title">PERIPAGE</h4>
-                        <div id="quant">
-                             <p id="select">select quantity: </p> -->
-                            <!-- <select name="" id="number" onchange="print()">
-                                <option value="1" >1</option>
-                                <option value="2" >2</option>
-                                <option value="3" >3</option>
-                                <option value="4" >4</option>
-                                <option value="5" >5</option>
-                            </select> -->
-                        <!-- </div>
-                        <p id="free">FREE DELIVERY</p>
-                        <p id="date">DELIVERY DATE:</p>
-                        <img src="https://icons.veryicon.com/png/o/commerce-shopping/soft-designer-online-tools-icon/delete-77.png"
-                            id="delete" alt="^">
-                    </div>
-                    <div id="our">
-                        <p>3999</p>
-                    </div>
-                    <div id="your">
-                        <p>5999</p>
-                    </div>
-                </div> -->
-
             </div>
         </div>
         <div id="checkoutdetails">
@@ -311,12 +295,12 @@
             <div id="prices">
                 <p id="quantity" class="det">Total items</p>
                 <p id="sub" class="det">sub total</p>
-                <p id="shipping" class="det">shipping</p>
+                <p id="shipping" class="det">Shipping: Free</p>
             </div>
             <div id="totalprice">
                 <p id="total"></p>
                 <p id="rate"></p>
-                <a href="payment.html"><button id="out">CHECKOUT NOW</button></a>
+                <a href="pay.html"><button id="out">CHECKOUT NOW</button></a>
             </div>
         </div>
     </div>
@@ -326,23 +310,10 @@
 
 </html>
 <script>
-    let data = [
-        {
-            title: "men",
-            our_price: 3000,
-            your_price: 2000,
-            quantity:2
-        },
-        {
-            title: "women",
-            our_price: 5000,
-            your_price: 3000,
-            quantity:3
-        },
-    ];
+    let data=JSON.parse(localStorage.getItem("productsdet"))||[];
 
     display(data)
-    function display(data){ 
+    function display(){ 
         let pro = document.getElementById("pro");
         pro.innerHTML="";
         let sum=0;
@@ -355,6 +326,7 @@
 
             let img=document.createElement("img");
             img.setAttribute("id","img");
+            img.src=el.image;
             images.append(img)
 
 
@@ -370,11 +342,6 @@
             let select=document.createElement("p");
             select.setAttribute("id","select")
             select.innerText="select quantity:"
-            // let dec=document.createElement("button")
-            // dec.setAttribute("id","dec")
-            // dec.addEventListener("clcick")
-            // let numbers=document.createElement("input");
-            // numbers.setAttribute("id","number")
             let numbers=document.createElement("select");
             numbers.setAttribute("id","number")
             let option0=document.createElement("option");
@@ -400,28 +367,9 @@
             sum=sum+el.quantity*el.your_price;
             numbers.addEventListener("change",myfunc)
                 function myfunc(){
-                    // if(numbers.value>el.quantity){
-                    //     // el.quantity=numbers.value;
-                    //     sum=sum+(numbers.value-el.quantity)*el.your_price;
-                    //     console.log("sum::",sum)
-                    //     let sub=document.getElementById("sub");
-                    //     sub.innerText=sum;
-                       
-                    // }else if(numbers.value<el.quantity){
-                    //     sum=sum-(el.quantity-numbers.value)*el.your_price;
-                    //     let sub=document.getElementById("sub");
-                    //     sub.innerText=sum;
-                    // }
-                    // else{
-                    //     sum=sum+el.quantity*el.your_price;
-                    //     let sub=document.getElementById("sub");
-                    //     sub.innerText=sum;
-                    //     console.log("sum",sum)
-                    // }
                     el.quantity=numbers.value;
                     localStorage.setItem("productsdet",JSON.stringify(data))
                     display(data)
-                    
                 }
             quant.append(select,numbers)
             
@@ -432,7 +380,7 @@
 
             let date=document.createElement("p");
             date.setAttribute("id","date")
-            date.innerText="DELIVERY DATE";
+            date.innerText="DELIVERY DATE: 26 September";
 
             let deleted=document.createElement("img");
             deleted.setAttribute("id","delete");
@@ -447,61 +395,18 @@
             let our=document.createElement("div");
             our.setAttribute("id","our")
             let p1=document.createElement("p");
-            p1.innerText=el.our_price
+            p1.innerText=`₹${el.our_price}`
             our.append(p1)
 
             let your=document.createElement("div");
             your.setAttribute("id","your")
             let p2=document.createElement("p");
-            p2.innerText=el.your_price;
+            p2.innerText=`₹${el.your_price}`;
             your.append(p2)
 
             products.append(images,details,our,your)
 
             pro.append(products)
-            // let =document.createElement("div");
-            // .setAttribute("id","")
-            // let =document.createElement("div");
-            // .setAttribute("id","")
-            // let =document.createElement("div");
-            // .setAttribute("id","")
-
-            // <div id="products">
-            //     <div id="images">
-            //         <img src="https://icons.veryicon.com/png/o/commerce-shopping/soft-designer-online-tools-icon/delete-77.png"
-            //             id="img" alt="^">
-            //     </div>
-            //     <div id="details">
-            //         <h4 id="title">${el.title}</h4>
-            //         <div id="quant">
-            //             <p id="select">select quantity: </p>
-            //             <select name="" id="number"  onload="printing()">
-            //                 <option value="1" selected="selected" id="selected">1</option>
-            //                 <option value="2">2</option>
-            //                 <option value="3">3</option>
-            //                 <option value="4">4</option>
-            //                 <option value="5">5</option>
-            //             </select>
-            //         </div>
-            //         <p id="free">FREE DELIVERY</p>
-            //         <p id="date">DELIVERY DATE:</p>
-            //         <img src="https://icons.veryicon.com/png/o/commerce-shopping/soft-designer-online-tools-icon/delete-77.png"
-            //             id="delete" alt="^">
-            //     </div>
-            //     <div id="our">
-            //         <p>${el.our_price}</p>
-            //     </div>
-            //     <div id="your">
-            //         <p>${el.your_price}</p>
-            //     </div>
-            // </div>
-            //     `;
-            // console.log(index)
-            // // let select=document.getElementById("number");
-            // // select.addEventListener("onchange",print)
-            
-            // hotel_list.innerHTML = otherday;
-            
             console.log("sum2",sum)
 
         });
@@ -511,43 +416,23 @@
 
 
         let sub=document.getElementById("sub");
-        sub.innerText=`subtotal:${sum}`;
+        sub.innerText=`Subtotal: ₹${sum}`;
         localStorage.setItem("total",sum)
         console.log("total",sum)
         let total=document.getElementById("total");
-        total.innerText=`Cart total ${sum}`
+        total.innerText=`Cart total: ₹${sum}`
 
         let rate=document.getElementById("rate");
-        rate.innerText=`Or 3 interest free payments of  ${(sum/3).toFixed(2)}`
-
+        rate.innerText=`Or 3 interest free payments of  ₹${(sum/3).toFixed(2)} with simpl!`
     }
+
+
+    
    
 
 
 
-    // function printing(){
-    //     // console.log(index)
-    //     let select=document.getElementById("selected").selected;
-    //     console.log(select)
-    //     // data[0].quantity=select;
-    //     // console.log(data[0].quantity)
-    // }
     
-    // data.forEach((el,index) => {
-    //     // sum=sum+el.quantity*el.your_price;
-    //     console.log(el.quantity)
-    // })
-
-
-    
-        
-    // let select=document.getElementById("number").value;
-    //     console.log(select)
-    // select.addEventListener("click")
-
-
-
-// print()
 
 
 
