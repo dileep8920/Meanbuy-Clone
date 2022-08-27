@@ -65,7 +65,7 @@ let navbar = () => {
                              </div>
                          </div>
                      </li>
-                     <li><a href="flash.html">Flash sale</a></li>
+                     <li><a href="product.html">Flash sale</a></li>
                      <li> <a href="best_deals.html"> Best Deals</a</li>
                      <li> <a href="ShopByBrand.html"> Shop By Brand</a</li>
                      <li> <a href="trending.html"> Trending</a</li>
