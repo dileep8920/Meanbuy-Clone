@@ -16,7 +16,7 @@ let navbar = () => {
                 <div id="links">
                     <p><a href="">Seller's Corner |</a></p>
                     <p><a href="">Feedback |</a></p>
-                    <p><a href="">Blog |</a></p>
+                    <p><a href="blog.html">Blog |</a></p>
                      <p> <a href="">Delivery Info</a></p>
                  </div>
                 <div id="log">
