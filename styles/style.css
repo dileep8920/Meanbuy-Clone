@@ -476,7 +476,7 @@ li:hover{
     display: flex;
    
 }
-input{
+#inp{
     margin-top: 15px;
     height: 40%;
     width: 50%;
@@ -655,7 +655,7 @@ text-align: center;
 /* input{
 height: 30px;
 } */
-form.searchB input[type=text]{
+form.searchB #inp[type=text]{
 width: 74%;
 height: 29px;
 float: left;

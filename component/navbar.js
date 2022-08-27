@@ -7,7 +7,7 @@ let navbar = () => {
                <a href="index.html"><img id="imgLogo" src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/baselogo.png" alt=""></a> 
                 <div id="abc">
                 <form class="searchB" action="">
-                <input type="text" placeholder="Search"/>
+                <input type="text" placeholder="Search" id="inp"/>
             </form>
             </div>
             </div>
