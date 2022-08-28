@@ -1,9 +1,3 @@
-import navbar from "../component/navbar.js"
-document.getElementById("navbar").innerHTML=navbar()
-
-import footer from "../component/footer.js"
-document.getElementById("footer").innerHTML=footer()
-
 let data=[
   {
     titlehref: "https://www.meanbuy.com/shop/product/Xiaomi_Mi_LED_Desk_Lamp_Pro_2",
@@ -202,7 +196,7 @@ function display(){
     box2.setAttribute("id","box2");
     let price=document.createElement("div");
     price.setAttribute("id","price")
-    price.innerText=`₹${el.your_price}`;
+    price.innerText=`₹${el.title}`;
     let cart=document.createElement("div");
     cart.setAttribute("id","cart");
     let btn=document.createElement("button");

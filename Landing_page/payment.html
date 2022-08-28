@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif ;
+        }
+        #popup{
+            width: 23%;
+            height: 474px;
+            border: 1px solid transparent;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        #popup::-webkit-scrollbar{
+            display: none;
+        }
+        #top1{
+            width: 100%;
+            height: 150px;
+            background-color: #f48739;
+            color: white;
+            border: 1px solid transparent;
+            display: flex;
+        }
+        #imag{
+            display: block;
+            margin-left: 30px;
+            width: 90px;
+            height: 90px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 0px 5px 0px 5px;
+         }
+         #top1>h4{
+            margin-left: 15px;
+            margin-top: 20px;
+         }  
+         #topay{
+            margin-top: 50px;
+            font-size: 40px;
+            margin-left: -65px;
+         }
+         #close{
+            /* border: 1px solid black; */
+            height: 20px;
+            width: 20px;
+            margin-top: 0px;
+            margin-left: 40px;
+         }
+         #top2{
+            border: 1px solid transparent;
+            height: 250px;
+         }
+         #top2>h5{
+            margin-top: 40px;
+            margin-left: 10px;
+            font-size: 20px;
+         }
+         #card{
+            margin-left: 10px;
+            width: 60%;
+            height: 30px;
+            margin-top: 20px;
+            font-size: 17px;
+            padding-left: 7px;
+         }
+         #expiry{
+            margin-left: 20px;
+            width: 20%;
+            height: 30px;
+            font-size: 17px;
+            padding-left: 7px;
+         }
+         #name{
+            margin-left: 10px;
+            width: 60%;
+            height: 30px;
+            margin-top: 20px;
+            font-size: 17px;
+            padding-left: 7px;
+         }
+         #cvv{
+            margin-left: 20px;
+            width: 20%;
+            height: 30px;
+            font-size: 17px;
+            padding-left: 7px;
+         }
+         #top3{
+            width: 100%;
+            height: 70px;
+            background-color: #f48739;
+            color: white;
+            display: flex;
+            align-items: center;    
+         }
+         #top3>p{
+            margin: auto;
+         }
+    </style>
+</head>
+<body>
+    <button id="paynow">PAYNOW</button>
+    <dialog id="popup">
+        <div id="top1">
+            <img id="imag" src="https://meanbuyassets.s3.ap-south-1.amazonaws.com/mb_square.png" alt="">
+            <h4>Meanbuy</h4>
+            <br>
+            <h1 id="topay">2588</h1>
+            <div id="close">×</div>  
+        </div>
+        <div id="top2">
+            <h5>Enter Card Details</h5>
+            <span id="span1"><input type="number" name="" placeholder="Card Number" id="card"> <input type="number" name="" placeholder="Expiry" id="expiry"></span>
+            <span id="span2"><input type="text" name="" placeholder="Name" id="name"> <input type="number" name="" placeholder="CVV" id="cvv"></span>
+        </div>
+        <div id="top3"><p>PAY NOW 3444</p></div>
+    </dialog>
+</body>
+</html>
+<script>
+     let popup=document.getElementById("popup");
+    let paynow=document.getElementById("paynow");
+    paynow.addEventListener('click',()=>{
+        popup.showModal();
+    })
+
+    let close=document.getElementById("close");
+    close.addEventListener('click',()=>{
+        popup.close();
+    })
+</script>
