@@ -126,7 +126,7 @@
 
     let checkout=document.getElementById("out");
     checkout.addEventListener("click",function(){
-        if(login==true){
+        if(login=="true"){
             window.location.href="pay.html"
         }else{
             window.location.href="login.html"

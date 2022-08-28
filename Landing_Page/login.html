@@ -92,7 +92,7 @@
 </html>
 <script>
 
-
+// let login=localStorage.getItem('login');
    
 let arr=JSON.parse(localStorage.getItem("signup"))||[]
 
@@ -113,7 +113,7 @@ arr.forEach(function(ele,index){
     if(ele.Pemail===obj.Pemail &&ele.Ppassword===obj.Ppassword)
     {
         flag=true;
-    localStorage.setItem("login",true)
+  localStorage.setItem("login",true)
         localStorage.setItem("signin",JSON.stringify(ele))
         alert("Log in succesfully");
         window.location.href="index.html"
