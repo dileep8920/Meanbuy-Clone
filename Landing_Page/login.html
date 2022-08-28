@@ -113,9 +113,9 @@ arr.forEach(function(ele,index){
     if(ele.Pemail===obj.Pemail &&ele.Ppassword===obj.Ppassword)
     {
         flag=true;
-
+    localStorage.setItem("login",true)
         localStorage.setItem("signin",JSON.stringify(ele))
-        alert("Sign in succesfully");
+        alert("Log in succesfully");
         window.location.href="index.html"
     }
 })
