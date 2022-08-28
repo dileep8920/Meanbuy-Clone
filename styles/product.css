@@ -3,13 +3,21 @@
             margin: 0px;
             padding: 0px;
         }
+        #div2{
+            margin-top: 240px;
+        }
+        #filter{
+            margin-left: 85%;
+            width: 150px;
+            font-size: 20px;
+        }
         #container{
             width: 90%;
             margin: auto;
             display: grid;
             grid-template-columns: repeat(4,1fr);
             gap: 40px 50px;
-            margin-top: 240px;
+            margin-top: 20px;
             margin-bottom: 200px;
         }
         #box{

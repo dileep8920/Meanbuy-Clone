@@ -176,8 +176,7 @@
             h3.innerText="Order placed !"
             popup.append(h3);
             setTimeout(function(){
-                window.location.href="cart.html"
-                alert("hello")
+                window.location.href="index.html";
             },5000)
         },3000)
     }

@@ -297,4 +297,26 @@ document.getElementById("footer").innerHTML=footer()
       }
       
       display(data)
-      
+
+
+      let productbox=document.getElementById("container");
+      document.querySelector("#filter").addEventListener("click",mysort)
+      function mysort(){
+         productbox.innerHTML="";
+         let number=document.querySelector("#filter").value
+         if(number==1){
+             data.sort(function(a,b){
+                 return a.your_price-b.your_price
+             })
+             display(data);
+         }
+         if(number==2){
+             data.sort(function(a,b){
+                 return b.your_price-a.your_price
+             })
+             display(data);
+         }
+         if(number==0){
+             display(data);
+         }
+      }
