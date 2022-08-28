@@ -52,7 +52,7 @@ let navbar = () => {
                                 </div>
                                 <div>
                                 <h5><u>ELECTRONICS</u></h5>
-                                <p><a href="electronics.html">Gaming Accessories</a></p>
+                                <p><a href="">Gaming Accessories</a></p>
                                 <p><a href="">Keyboards & Mouse</a></p>
                                 <p><a href="">Small Appliances</a></p>
                           </div>
