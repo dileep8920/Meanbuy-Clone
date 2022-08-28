@@ -32,7 +32,7 @@ let navbar = () => {
                     <div id="carIm">
                         <img class="cartimg" src="http://www.clker.com/cliparts/O/N/s/Q/P/Y/shopping-cart-orange-th.png" alt="">
                     <p id="cartcount">
-                    </div></p>0</div>
+                    </div></p></div>
             </div>
          </div>
         </a>
