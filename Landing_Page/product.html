@@ -10,6 +10,8 @@
         #maindiv{
             width: 90%;
             height: 700px;
+            margin-top: 250px;
+            margin-bottom: 200px;
             /* border: 1px solid grey; */
             margin: auto;
             display: flex;
@@ -126,8 +128,9 @@
     </style>
 </head>
 <body>
-    <div id="navbar"></div>
+   
     <div id="maindiv">
+        <div id="navbar"></div>
         <div id="subdiv1">
             <p id="logo">
                 -29%
@@ -169,13 +172,20 @@
           
            
         </div>
+        <div id="footer"></div>
     </div>
-    <div id="footer"></div>
+   
 </body>
 </html>
 
 <script type="module">
 
+// import navbar from "../component/navbar.js"
+// document.getElementById("navbar").innerHTML=navbar()
+
+
+// import footer from "../component/footer.js"
+// document.getElementById("footer").innerHTML=footer()
 
     function myfunction(){
         window.location.href="pay.html"
