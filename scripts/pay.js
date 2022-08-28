@@ -96,6 +96,10 @@
   let grande = document.getElementById("tdd");
   grande.innerText = `₹${alltotal}`;
 
+
+
+let apply=document.getElementById("apply");
+apply.addEventListener("click",coupon)
   function coupon() {
     let code = document.getElementById("code");
     if (code.value === "PREPAID") {
@@ -123,6 +127,10 @@
       wro.innerText = "This Promo Code is not valid";
     }
   }
+
+
+  let remov=document.getElementById("remove");
+  remov.addEventListener("click",remove)
 
   function remove() {
     alltotal = alltotal + 500;
@@ -176,6 +184,7 @@
             h3.innerText="Order placed !"
             popup.append(h3);
             setTimeout(function(){
+              localStorage.setItem
                 window.location.href="index.html";
             },5000)
         },3000)
