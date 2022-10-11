@@ -57,11 +57,17 @@
       }
       #state {
         width: 93%;
+        height: 40px;
       }
       #india > p {
         font-size: 18px;
         margin-top: 5px;
       }
+      #india{
+        width: 90%;
+        height: 40px;
+      }
+
       /* payment details */
       #add + h4 {
         margin-top: 45px;

@@ -22,6 +22,7 @@
 #header {
     display: flex;
     height: 40px;
+    align-content: space-between;
 }
 
 .image {
@@ -38,6 +39,7 @@
     padding-top: 7px;
     font-weight: 500;
     color: rgb(107, 105, 105);
+    
     background-color: whitesmoke;
 }
 
