@@ -26,11 +26,8 @@ https://shiny-torrone-69ae7b.netlify.app/landing_page/
 5.[Deepak]
 
 - `(Add TO Cart Page)`
-
-<br>
-### Following are the Screenshots for the reference
-
-- *Landing Page*
+  
+    - *Landing Page*
   ![Landing Page](https://miro.medium.com/max/828/1*HX8aeE_ebDT4rJkR4EJGuA.png)
   
   - *Blog Page*
