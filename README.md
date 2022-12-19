@@ -27,8 +27,11 @@ https://shiny-torrone-69ae7b.netlify.app/landing_page/
 
 - `(Add TO Cart Page)`
 
-- *Landing Page*
-  ![Landing Page]https://miro.medium.com/max/828/1*HX8aeE_ebDT4rJkR4EJGuA.webp)
+<br>
+### Following are the Screenshots for the reference
+
+- **Landing Page**
+  ![Landing Page](https://miro.medium.com/max/828/1*HX8aeE_ebDT4rJkR4EJGuA.png)
   
   - *Blog Page*
   ![Blog Page](https://miro.medium.com/max/1400/1*wZ3xlMwKsOvfkN4nSXjD_w.png)
