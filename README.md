@@ -30,17 +30,17 @@ https://shiny-torrone-69ae7b.netlify.app/landing_page/
 <br>
 ### Following are the Screenshots for the reference
 
-- **Landing Page**
+- *Landing Page*
   ![Landing Page](https://miro.medium.com/max/828/1*HX8aeE_ebDT4rJkR4EJGuA.png)
   
   - *Blog Page*
-  ![Blog Page](https://miro.medium.com/max/1400/1*wZ3xlMwKsOvfkN4nSXjD_w.png)
+  ![Blog Page](https://cdn-images-1.medium.com/max/1000/1*jU-KUi-WvsIbPuM1TstTlw.png)
   
   - *SignIn Page*
-  ![SignIn Page](https://miro.medium.com/max/1400/1*wZ3xlMwKsOvfkN4nSXjD_w.png)
+  ![SignIn Page](https://miro.medium.com/max/828/1*jYQaZmy34rIGq-q-kSJx2w.png)
   
   - *Cart Page*
-  ![Cart Page](https://miro.medium.com/max/1400/1*wZ3xlMwKsOvfkN4nSXjD_w.png)
+  ![Cart Page](https://miro.medium.com/max/828/1*ChngaOfi6Qz35j80gjERBQ.png)
   
    - *CheckOut Page*
-  ![CheckOut Page](https://miro.medium.com/max/1400/1*wZ3xlMwKsOvfkN4nSXjD_w.png)
+  ![CheckOut Page](https://miro.medium.com/max/828/1*H4RSd8wFXGWTdR0ujDUSDw.png)
