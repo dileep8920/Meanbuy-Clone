@@ -33,14 +33,14 @@ https://shiny-torrone-69ae7b.netlify.app/landing_page/
 <br>
 <br>
 <h2>SignUp Page</h2>
-<img width="960" alt="2022-09-29 (6)" src="https://user-images.githubusercontent.com/103635506/193003759-de7aa4ee-6d35-4cdf-bafe-d728275a6f87.png">
+<img width="960" alt="2022-09-29 (6)" src="">
 <br>
 <br>
 <h2>Blog Page</h2>
-<img width="960" alt="2022-09-29 (7)" src="https://user-images.githubusercontent.com/103635506/193003799-de441621-3f31-48d6-91b8-7ddeb0b5ed5e.png">
+<img width="960" alt="2022-09-29 (7)" src="">
 <br>
 <br>
 <h2>AfterLogin Page</h2>
-<img width="960" alt="2022-09-29 (8)" src="https://user-images.githubusercontent.com/103635506/193003814-047b485d-a7c6-4c84-bb45-6da111e1f70f.png">
+<img width="960" alt="2022-09-29 (8)" src="">
 <br>
 <br>
